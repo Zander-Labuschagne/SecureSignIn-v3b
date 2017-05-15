@@ -13,6 +13,10 @@ There are Android, iPhone, iPad and macOS applications available as well, howeve
   
 The logo and name on the application comes from an iWorks template, it is not a registered company name or logo, I just added it to make it look cool.
 
+E-Mail: ZANDER.LABUSCHAGNE@PROTONMAIL.CH
+
+Copyright (C) 2017 Zander Labuschagne. This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation.
+
 How to install:
   1. Oracle JRE is required to run the application, OpenJDK does not work for some reason.
   2. Either run the SecureSignInV3.2.jar file on any operating system(double click the file or ``java -jar SecureSignInV3.2.jar'' in command line) or run the install.sh file to install the application on Linux systems.
