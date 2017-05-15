@@ -9,7 +9,7 @@ Benifits:
   - Easy to use.
   
 This is my first JavaFX application I have created and my first Linux deployable application. Feel free to criticize or comment.
-There are Android, iPhone, iPad and macOS applications available as well, however they are not always up to date and I have left some of them discontinued/incomplete. I work on these projects in my free time so don't expect regular updates from me.
+There are Android, iPhone, iPad and macOS applications available as well, however they are not always up to date and I have left some of them discontinued/incomplete. I work on these projects in my free time only so don't expect regular updates from me.
   
 The logo and name on the application comes from an iWorks template, it is not a registered company name or logo, I just added it to make it look cool.
 
