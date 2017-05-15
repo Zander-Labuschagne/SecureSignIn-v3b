@@ -6,7 +6,8 @@
 
 .vbox
 {
-    -fx-background-color: #313538;
+   /* -fx-background-color: #313538;*/
+    -fx-background-color: black;
 
 }
 
