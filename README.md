@@ -1,4 +1,4 @@
-# SecureSignIn
+# Secure-Sign-In
 This is an application I have created in an attempt to improve my online account security.
 
 Benifits:
