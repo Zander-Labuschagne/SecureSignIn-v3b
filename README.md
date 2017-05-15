@@ -20,7 +20,7 @@ Copyright (C) 2017 Zander Labuschagne. This program is free software: you can re
 How to install:
   1. Oracle JRE is required to run the application, OpenJDK does not work for some reason.
   2. Either run the SecureSignInV3.2.jar file on any operating system(double click the file or ``java -jar SecureSignInV3.2.jar`` in command line) or run the install.sh file to install the application on Linux systems.
-On some Linux systems it's necessary to run ``sudo chmod +x install.sh'' before installation.
+On some Linux systems it's necessary to run ``sudo chmod +x install.sh`` before installation.
 
 How to use application:
   1. Enter a password you will remember in the password box, preferably a strong and complicated password because this will influence the complexity of the resulting password.
