@@ -15,10 +15,10 @@ The logo and name on the application comes from an iWorks template, it is not a 
 
 How to install:
   1. Oracle JRE is required to run the application, OpenJDK does not work for some reason.
-  2. Either run the SecureSignInV3.2.jar file on any operating system(double click the file or ``java -jar SecureSignInV3.2.jar'' in command line) or the Deployment/Linux/install.sh file inside the Deployment folder to install the application on Linux systems.
+  2. Either run the SecureSignInV3.2.jar file on any operating system(double click the file or ``java -jar SecureSignInV3.2.jar'' in command line) or run the install.sh file to install the application on Linux systems.
 On some Linux systems it's necessary to run ``sudo chmod +x install.sh'' before installation.
 
 How to use application:
-  1. Enter a password you will remember in the Password box, preferably a strong and complicated password because this will influence the complexity of the resulting password.
+  1. Enter a password you will remember in the password box, preferably a strong and complicated password because this will influence the complexity of the resulting password.
   2. Enter a key, such as google, facebook or whatever.
   3. Click on Encrypt Password and the rest is self explanatory.
