@@ -1,4 +1,3 @@
-
 /**
  * @author Zander Labuschagne
  * E-Mail: ZANDER.LABUSCHAGNE@PROTONMAIL.CH
@@ -11,21 +10,16 @@
 {
     -fx-font-size: 8pt;
     -fx-font-family: "DejaVu Sans Mono";
-    -fx-opacity: 0.7;
 }
-
 
 .vbox
 {
     -fx-background-color: rgb(38, 40, 49);
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 20, 0.6, 0, 0);
-    -fx-background-insets: 12;
-    -fx-background-radius: 6;
 }
 
 .label
 {
-    -fx-text-fill: rgb(183, 186, 195);
+    -fx-text-fill: #7dc6bf;
 }
 
 .txtDefault,
@@ -34,6 +28,7 @@
     -fx-background-color: rgb(49, 52, 63);
     -fx-text-fill: #7dc6bf;
     -fx-border-color:  #7dc6bf;
+    -fx-font-family: "Noto Sans";
     -fx-highlight-fill: rgb(104, 112, 136);
     -fx-background-insets: 0;
     -fx-text-box-border: transparent;
@@ -103,91 +98,26 @@
     -fx-background-color:rgba(0, 93, 255, 0.4);
 }
 
-.btnEncryptMessage
+.btnEncrypt
 {
-    -fx-background-color: rgb(38, 40, 49);
+    -fx-background-color:rgb(49, 52, 63);
     -fx-text-fill:  #7dc6bf;
     -fx-border-color: rgb(15, 15, 15);
     -fx-border-width: 0.75;
-    -fx-background-image: url("/icons/lock.png");
+    -fx-background-image: url("/lock.png");
     -fx-background-size: 12px 12px;
     -fx-background-repeat: no-repeat;
-    -fx-background-position: left 12px top 7px;
+    -fx-background-position: left 130px top 7px;
 }
-
-.btnEncryptMessage:hover
+.btnEncrypt:hover
 {
     -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 0.4), 5, 0.65, 0, 0);
     -fx-background-color: rgba(0,93,255,0.1);
 }
-.btnEncryptMessage:focused
+.btnEncrypt:focused
 {
     -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 0.4), 5, 0.65, 0, 0);
 }
-
-.btnEncryptFiles
-{
-    -fx-background-color: rgb(38, 40, 49);
-    -fx-text-fill:  #7dc6bf;
-    -fx-border-color: rgb(15, 15, 15);
-    -fx-border-width: 0.75;
-    -fx-background-image: url("/icons/lock.png");
-    -fx-background-size: 12px 12px;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: left 12px top 7px;
-}
-.btnEncryptFiles:hover
-{
-    -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 0.4), 5, 0.65, 0, 0);
-    -fx-background-color: rgba(0,93,255,0.1);
-}
-.btnEncryptFiles:focused
-{
-    -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 0.4), 5, 0.65, 0, 0);
-}
-
-.btnDecryptMessage
-{
-    -fx-background-color: rgb(38, 40, 49);
-    -fx-text-fill:  #7dc6bf;
-    -fx-border-color: rgb(15, 15, 15);
-    -fx-border-width: 0.75;
-    -fx-background-image: url("/icons/unlock.png");
-    -fx-background-size: 13px 16px;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: left 14px top 5px;
-}
-.btnDecryptMessage:hover
-{
-    -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 1), 5, 0.65, 0, 0);
-    -fx-background-color: rgba(0,93,255,0.1);
-}
-.btnDecryptMessage:focused
-{
-    -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 0.4), 5, 0.65, 0, 0);
-}
-
-.btnDecryptFiles
-{
-    -fx-background-color: rgb(38, 40, 49);
-    -fx-text-fill: #7dc6bf;
-    -fx-border-color: rgb(15, 15, 15);
-    -fx-border-width: 0.75;
-    -fx-background-image: url("/icons/unlock.png");
-    -fx-background-size: 13px 16px;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: left 12px top 5px;
-}
-.btnDecryptFiles:hover
-{
-    -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 1), 5, 0.65, 0, 0);
-    -fx-background-color: rgba(0,93,255,0.1);
-}
-.btnDecryptFiles:focused
-{
-    -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 0.4), 5, 0.65, 0, 0);
-}
-
 .pneDefault
 {
     -fx-skin: "com.sun.javafx.scene.control.skin.TitledPaneSkin";
@@ -622,8 +552,8 @@
     /*.menu-button,
     .choice-box,
     .color-picker.split-button > .color-picker-label*/,
-.combo-box-base,
-.combo-box-base:editable > .arrow-button
+    .combo-box-base,
+    .combo-box-base:editable > .arrow-button
 {
     -fx-background-color: rgb(38, 40, 49);
     -fx-text-fill:  #7dc6bf;
@@ -719,21 +649,21 @@
 .combo-box-base .list-cell
 {
     -fx-background-color: rgb(38, 40, 49);
-    -fx-text-fill: rgb(183, 186, 195);
+    -fx-text-fill: #7dc6bf;
     -fx-border-color: rgb(15, 15, 15);
 }
 
 .combo-box-base .list-view
 {
     -fx-background-color: rgb(38, 40, 49);
-    -fx-text-fill: rgb(183, 186, 195);
+    -fx-text-fill: #7dc6bf;
     -fx-border-color: rgb(15, 15, 15);
 }
 
 .combo-box-base .list-cell:filled:selected:hover
 {
     -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 0.4), 5, 0.65, 0, 0);
-    -fx-text-fill: rgb(183, 186, 195);
+    -fx-text-fill: #7dc6bf;
     -fx-background-insets: -0.2, 1, 2, -1.4, 2.6;
     -fx-background-radius: 3, 2, 1, 4, 1;
 }
@@ -747,7 +677,7 @@
 .combo-box-base:showing
 {
     -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 0.4), 5, 0.65, 0, 0);
-    -fx-text-fill: rgb(183, 186, 195);
+    -fx-text-fill: #7dc6bf;
 }
 
 /* ====   DISABLED THINGS   ================================================= */

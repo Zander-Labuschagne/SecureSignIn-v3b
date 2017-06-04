@@ -5,20 +5,13 @@ package cryogen;
  * E-Mail: ZANDER.LABUSCHAGNE@PROTONMAIL.CH
  */
 
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.geometry.Point2D;
-import javafx.scene.Cursor;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -28,6 +21,7 @@ import java.net.URL;
 import java.util.LinkedList;
 import java.util.Optional;
 import java.util.ResourceBundle;
+
 
 public class SecureSignIn implements Initializable
 {
@@ -40,7 +34,7 @@ public class SecureSignIn implements Initializable
     //GUI Instance Variables
     @FXML private PasswordField pswPassword;
     @FXML private PasswordField pswKey;
-    @FXML private CheckBox cbxCompact;
+    @FXML private ToggleSwitch switchCompact;
 
     //Default Constructor
     public SecureSignIn()
@@ -87,8 +81,8 @@ public class SecureSignIn implements Initializable
             }
 
             int limit;
-            if(cbxCompact.isSelected())
-                limit = 12;
+            if(switchCompact.isSelected())
+                limit = 8;
             else
                 limit = 32;
 
