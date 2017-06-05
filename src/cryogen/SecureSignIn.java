@@ -84,7 +84,7 @@ public class SecureSignIn implements Initializable
 
             int limit;
             if(switchCompact.isSelected())
-                limit = 8;
+                limit = 12;
             else
                 limit = 32;
 
