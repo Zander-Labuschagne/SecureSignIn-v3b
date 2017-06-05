@@ -218,15 +218,7 @@
  * Button like things                                                          *
  *                                                                             *
  ******************************************************************************/
-.button,
-.toggle-button/*,
-.radio-button > .radio,*/
-    /*.check-box > .box,*/
-    /*.menu-button,
-    .choice-box,
-    .color-picker.split-button > .color-picker-label*/,
-.combo-box-base,
-.combo-box-base:editable > .arrow-button
+.button
 {
     -fx-background-color: rgb(38, 40, 49);
     -fx-text-fill:  #7dc6bf;
@@ -238,120 +230,24 @@
     /*-fx-alignment: CENTER;
     -fx-content-display: LEFT;*/
 }
-.menu-button > .label
-{
-    -fx-alignment: CENTER_LEFT;
-}
-.button:hover,
-.toggle-button:hover,
-.radio-button:hover > .radio,
-.check-box:hover > .box,
-.menu-button:hover,
-.split-menu-button > .label:hover,
-.split-menu-button > .arrow-button:hover,
-.slider .thumb:hover,
-.scroll-bar > .thumb:hover,
-.scroll-bar > .increment-button:hover,
-.scroll-bar > .decrement-button:hover,
-.choice-box:hover,
-.color-picker.split-button > .arrow-button:hover,
-.color-picker.split-button > .color-picker-label:hover,
-.combo-box-base:hover,
-.combo-box-base:editable > .arrow-button:hover,
-.spinner .increment-arrow-button:hover,
-.spinner .decrement-arrow-button:hover,
-.tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button:hover
+.button:hover
 {
     -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 0.4), 5, 0.65, 0, 0);
     -fx-background-color: rgba(0,93,255,0.1);
     -fx-text-fill:  #7dc6bf;
 
 }
-.button:armed/*,
-.toggle-button:armed,
-.radio-button:armed > .radio,
-.check-box:armed .box,
-.menu-button:armed,
-.split-menu-button:armed > .label,
-.split-menu-button > .arrow-button:pressed,
-.split-menu-button:showing > .arrow-button,
-.slider .thumb:pressed,
-.scroll-bar > .thumb:pressed,
-.scroll-bar > .increment-button:pressed,
-.scroll-bar > .decrement-button:pressed,
-.choice-box:showing*/,
-.combo-box-base:showing,
-.combo-box-base:editable:showing > .arrow-button/*,
-.spinner .increment-arrow-button:pressed,
-.spinner .decrement-arrow-button:pressed,
-.tab-pane > .tab-header-area > .control-buttons-tab > .container > .tab-down-button:pressed*/
+.button:armed
 {
     -fx-color: -fx-pressed-base;
     -fx-text-fill:  #7dc6bf;
 }
-.button:focused/*,
-.toggle-button:focused,
-.radio-button:focused > .radio,
-.check-box:focused > .box,
-.menu-button:focused,
-.choice-box:focused,
-.color-picker.split-button:focused > .color-picker-label*/,
-.combo-box-base:focused/*,
-.slider:focused .thumb*/
+.button:focused
 {
     -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 0.4), 5, 0.65, 0, 0);
     -fx-background-insets: -0.2, 1, 2, -1.4, 2.6;
     -fx-background-radius: 3, 2, 1, 4, 1;
     -fx-text-fill:  #7dc6bf;
-}
-
-
-/*******************************************************************************
- *                                                                             *
- * Disabled things                                                             *
- *                                                                             *
- ******************************************************************************/
-.label:disabled,
-.button:disabled,
-.toggle-button:disabled,
-.radio-button:disabled,
-.check-box:disabled,
-.hyperlink:disabled,
-.menu-button:disabled,
-.split-menu-button:disabled,
-.slider:disabled,
-.scroll-bar:disabled,
-.scroll-pane:disabled,
-.progress-bar:disabled,
-.progress-indicator:disabled,
-.text-input:disabled,
-.choice-box:disabled,
-.combo-box-base:disabled,
-.date-cell:disabled > *, /* This is set on children so border is not affected. */
-.list-view:disabled,
-.tree-view:disabled,
-.table-view:disabled,
-.tree-table-view:disabled,
-.tab-pane:disabled,
-.titled-pane:disabled > .title,
-.accordion:disabled > .titled-pane > .title,
-.tab-pane > .tab-header-area > .headers-region > .tab:disabled,
-.menu:disabled,
-.menu-item:disabled > .label,
-.menu-item:disabled,
-.list-cell:filled:selected:focused:disabled,
-.list-cell:filled:selected:disabled,
-.tree-cell:filled:selected:focused:disabled,
-.tree-cell:filled:selected:disabled,
-.tree-cell > .tree-disclosure-node:disabled,
-.tree-table-row-cell > .tree-disclosure-node:disabled,
-.table-row-cell:selected:disabled,
-.tree-table-row-cell:selected:disabled,
-.table-cell:selected:disabled,
-.tree-table-cell:selected:disabled,
-.spinner:disabled
-{
-    -fx-opacity: 0.4;
 }
 
 /*******************************************************************************
