@@ -9,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -16,11 +17,12 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.io.IOException;
 import java.net.URL;
-import java.util.LinkedList;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
 
 
 public class SecureSignIn implements Initializable
@@ -100,6 +102,24 @@ public class SecureSignIn implements Initializable
             Output pass = loader.<Output>getController();
             pass.initialize(cipherPassword);
             passWindow.showAndWait();
+            Thread deletePassword = new Thread()
+            {
+                public void run()
+                {
+                    try
+                    {
+                        Thread.sleep(10000);
+                        Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
+                        clipboard.setContents(new StringSelection(""), null);
+                    }
+                    catch(InterruptedException v)
+                    {
+                        v.printStackTrace();
+                    }
+                }
+            };
+
+            deletePassword.start();
         }
         catch (Exception ex)
         {

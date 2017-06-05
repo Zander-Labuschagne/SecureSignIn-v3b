@@ -14,8 +14,6 @@ import javafx.scene.text.Font;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
-import java.io.File;
-import java.io.InputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 
