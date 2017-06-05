@@ -12,6 +12,11 @@
     -fx-font-family: "DejaVu Sans Mono";
 }
 
+/*******************************************************************************
+ *                                                                             *
+ * VBox                                                                        *
+ *                                                                             *
+ ******************************************************************************/
 .vbox
 {
     -fx-background-color: rgb(38, 40, 49);
@@ -597,10 +602,11 @@
 
 }
 
-/*.toggle-switch:pressed .thumb-area, .toggle-switch:selected:pressed .thumb-area{*/
-/*-fx-background-insets: 0, 1;*/
-/*-fx-background-color: -fx-outer-border, #666666;*/
-/*}*/
+.toggle-switch:pressed .thumb-area, .toggle-switch:selected:pressed .thumb-area
+{
+    -fx-background-insets: 0, 1;
+    -fx-background-color: -fx-outer-border,rgb(104, 112, 136);
+}
 
 .toggle-switch .thumb-area
 {
