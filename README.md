@@ -21,10 +21,11 @@ Copyright (C) 2017 Zander Labuschagne. This program is free software: you can re
 
 How to install:
   1. Oracle Java Runtime Environment is required to run the application, OpenJDK does not work for some reason.
-  2. Either run the SecureSignInV3.2.jar file on any operating system(double click the file or ``java -jar SecureSignInV3.2.jar`` in command line) or run the install.sh file to install the application on Linux systems with the following command: ``sudo sh install.sh``.
+  2. Either run the SecureSignInV3.2.jar file on any operating system(double click the file or ``java -jar SecureSignIn-3.2.jar`` in command line) or run the install.sh file after extracting the zip file to install the application on Linux systems with the following command: ``sudo sh install.sh``.
   3. On some Linux systems it's necessary to run ``sudo chmod +x install.sh`` before installation.
 
 How to use application:
   1. Enter a password you will remember in the password box, preferably a strong and complicated password because this will influence the complexity of the resulting password.
   2. Enter a key, such as google, facebook or whatever.
   3. Click on Encrypt Password and the rest is self explanatory.
+  4. Some website have limitations on the length of the passwords, hence the compact password switch.
