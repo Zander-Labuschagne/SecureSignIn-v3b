@@ -13,6 +13,7 @@
 		CF36DC2E1BFE086100C3EB9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF36DC2C1BFE086100C3EB9C /* Main.storyboard */; };
 		CF36DC391BFE086100C3EB9C /* Secure_Sign_InTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF36DC381BFE086100C3EB9C /* Secure_Sign_InTests.swift */; };
 		CF36DC441BFE086100C3EB9C /* Secure_Sign_InUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF36DC431BFE086100C3EB9C /* Secure_Sign_InUITests.swift */; };
+		CF510CA11D70B3F2000B492B /* cryogen_blue_portrait_light_theme.png in Resources */ = {isa = PBXBuildFile; fileRef = CF510CA01D70B3F2000B492B /* cryogen_blue_portrait_light_theme.png */; };
 		CFDAF1631BFFB25400610603 /* OSDOutputWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDAF1621BFFB25400610603 /* OSDOutputWindow.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		CF36DC451BFE086100C3EB9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF36DC511BFE08E100C3EB9C /* Secure Sign In.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Secure Sign In.entitlements"; sourceTree = "<group>"; };
 		CF493EDB1C05D8BB00C0E31B /* Script.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = Script.sh; sourceTree = "<group>"; };
+		CF510CA01D70B3F2000B492B /* cryogen_blue_portrait_light_theme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cryogen_blue_portrait_light_theme.png; path = "Secure Sign In/cryogen_blue_portrait_light_theme.png"; sourceTree = "<group>"; };
 		CFDAF1621BFFB25400610603 /* OSDOutputWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSDOutputWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 		CF36DC1A1BFE086100C3EB9C = {
 			isa = PBXGroup;
 			children = (
+				CF510CA01D70B3F2000B492B /* cryogen_blue_portrait_light_theme.png */,
 				CF493EDB1C05D8BB00C0E31B /* Script.sh */,
 				CF36DC251BFE086100C3EB9C /* Secure Sign In */,
 				CF36DC371BFE086100C3EB9C /* Secure Sign InTests */,
@@ -240,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF510CA11D70B3F2000B492B /* cryogen_blue_portrait_light_theme.png in Resources */,
 				CF36DC2B1BFE086100C3EB9C /* Assets.xcassets in Resources */,
 				CF36DC2E1BFE086100C3EB9C /* Main.storyboard in Resources */,
 			);
@@ -405,8 +409,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Secure Sign In/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "Cryon.Secure-Sign-In";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "Cryogen.Secure-Sign-In";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Secure Sign In/Secure Sign In-Bridging-Header.h";
@@ -424,8 +428,8 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Secure Sign In/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = "Cryon.Secure-Sign-In";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "Cryogen.Secure-Sign-In";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Secure Sign In/Secure Sign In-Bridging-Header.h";

@@ -29,6 +29,7 @@ class OSDOutputWindow: NSViewController
             str += "*";
         }
         self.txtEncryptedPassword.stringValue = str;
+								self.txtEncryptedPassword.font = NSFont(name: "PT MONO", size: 12)
         super.viewDidLoad();
         
     }
@@ -42,7 +43,7 @@ class OSDOutputWindow: NSViewController
         }
         else
         {
-            btnHide.title = "Unhide Password";
+            btnHide.title = "Reveal Password";
             status = 0;
             txtEncryptedPassword.stringValue = str;
         }
