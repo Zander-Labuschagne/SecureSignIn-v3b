@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="securesigninv2" default="all">
+  
+  
+  <property file="securesigninv2.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/RCS/**"/>
+    <exclude name="**/SCCS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/rcs/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.war"/>
+    <include name="*.swc"/>
+    <include name="*.apk"/>
+    <include name="*.zip"/>
+    <include name="*.egg"/>
+    <include name="*.ane"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.jgoodies_forms.classpath">
+    <pathelement location="${basedir}/lib/jgoodies-common.jar"/>
+    <pathelement location="${basedir}/lib/jgoodies-forms.jar"/>
+  </path>
+  
+  <path id="library.jgoodies_uif_lite.classpath">
+    <pathelement location="${basedir}/lib/jgoodies-uif-lite.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <pathelement location="${javac2.home}/javac2.jar"/>
+    <pathelement location="${javac2.home}/jdom.jar"/>
+    <pathelement location="${javac2.home}/asm-all.jar"/>
+    <pathelement location="${javac2.home}/jgoodies-forms.jar"/>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  
+  <!-- Module SecureSignInV2 -->
+  
+  <dirname property="module.securesigninv2.basedir" file="${ant.file}"/>
+  
+  
+  <property name="module.jdk.home.securesigninv2" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.securesigninv2" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.securesigninv2" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.securesigninv2" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="securesigninv2.output.dir" value="${module.securesigninv2.basedir}/out/production/SecureSignInV2"/>
+  <property name="securesigninv2.testoutput.dir" value="${module.securesigninv2.basedir}/out/test/SecureSignInV2"/>
+  
+  <path id="securesigninv2.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="securesigninv2.module.production.classpath">
+    <path refid="${module.jdk.classpath.securesigninv2}"/>
+    <path refid="library.jgoodies_forms.classpath"/>
+    <path refid="library.jgoodies_uif_lite.classpath"/>
+  </path>
+  
+  <path id="securesigninv2.runtime.production.module.classpath">
+    <pathelement location="${securesigninv2.output.dir}"/>
+    <path refid="library.jgoodies_forms.classpath"/>
+    <path refid="library.jgoodies_uif_lite.classpath"/>
+  </path>
+  
+  <path id="securesigninv2.module.classpath">
+    <path refid="${module.jdk.classpath.securesigninv2}"/>
+    <pathelement location="${securesigninv2.output.dir}"/>
+    <path refid="library.jgoodies_forms.classpath"/>
+    <path refid="library.jgoodies_uif_lite.classpath"/>
+  </path>
+  
+  <path id="securesigninv2.runtime.module.classpath">
+    <pathelement location="${securesigninv2.testoutput.dir}"/>
+    <pathelement location="${securesigninv2.output.dir}"/>
+    <path refid="library.jgoodies_forms.classpath"/>
+    <path refid="library.jgoodies_uif_lite.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.securesigninv2">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.securesigninv2">
+    <patternset refid="excluded.from.module.securesigninv2"/>
+  </patternset>
+  
+  <path id="securesigninv2.module.sourcepath">
+    <dirset dir="${module.securesigninv2.basedir}">
+      <include name="src"/>
+      <include name="res"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.securesigninv2" depends="compile.module.securesigninv2.production,compile.module.securesigninv2.tests" description="Compile module SecureSignInV2"/>
+  
+  <target name="compile.module.securesigninv2.production" depends="register.custom.compilers" description="Compile module SecureSignInV2; production classes">
+    <mkdir dir="${securesigninv2.output.dir}"/>
+    <javac2 destdir="${securesigninv2.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.securesigninv2}/javac">
+      <compilerarg line="${compiler.args.securesigninv2}"/>
+      <bootclasspath refid="securesigninv2.module.bootclasspath"/>
+      <classpath refid="securesigninv2.module.production.classpath"/>
+      <src refid="securesigninv2.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.securesigninv2"/>
+    </javac2>
+    
+    <copy todir="${securesigninv2.output.dir}">
+      <fileset dir="${module.securesigninv2.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.securesigninv2.basedir}/res">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.securesigninv2.tests" depends="register.custom.compilers,compile.module.securesigninv2.production" description="compile module SecureSignInV2; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.securesigninv2" description="cleanup module">
+    <delete dir="${securesigninv2.output.dir}"/>
+    <delete dir="${securesigninv2.testoutput.dir}"/>
+  </target>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.securesigninv2" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.securesigninv2" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.securesigninv2.1:jar" value="${basedir}/out/artifacts/SecureSignInV2_1_jar"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="temp.jar.path.SecureSignInV2.jar" value="${artifacts.temp.dir}/SecureSignInV2.jar"/>
+  </target>
+  
+  <target name="artifact.securesigninv2.1:jar" depends="init.artifacts, compile.module.securesigninv2" description="Build &#39;SecureSignInV2.1:jar&#39; artifact">
+    <property name="artifact.temp.output.securesigninv2.1:jar" value="${artifacts.temp.dir}/SecureSignInV2_1_jar"/>
+    <mkdir dir="${artifact.temp.output.securesigninv2.1:jar}"/>
+    <jar destfile="${temp.jar.path.SecureSignInV2.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${securesigninv2.output.dir}"/>
+      <zipfileset src="${basedir}/lib/jgoodies-uif-lite.jar"/>
+      <zipfileset src="${basedir}/lib/jgoodies-forms.jar"/>
+      <zipfileset src="${basedir}/lib/jgoodies-common.jar"/>
+      <zipfileset file="${basedir}/lib/jgoodies-forms.jar"/>
+      <zipfileset file="${basedir}/lib/jgoodies-common.jar"/>
+      <zipfileset file="${basedir}/lib/jgoodies-uif-lite.jar"/>
+    </jar>
+    <copy file="${temp.jar.path.SecureSignInV2.jar}" tofile="${artifact.temp.output.securesigninv2.1:jar}/SecureSignInV2.jar"/>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.securesigninv2.1:jar" description="Build all artifacts">
+    <mkdir dir="${artifact.output.securesigninv2.1:jar}"/>
+    <copy todir="${artifact.output.securesigninv2.1:jar}">
+      <fileset dir="${artifact.temp.output.securesigninv2.1:jar}"/>
+    </copy>
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>

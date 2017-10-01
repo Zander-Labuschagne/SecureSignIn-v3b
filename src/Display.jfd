@@ -1,10 +1,10 @@
-JFDML JFormDesigner: "5.2.3.0.281" Java: "1.8.0_76-release" encoding: "UTF-8"
+JFDML JFormDesigner: "5.2.4.0.321" Java: "1.8.0_76-release" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
-			"$columnSpecs": "default, labelcompgap, 75dlu, labelcompgap, 70dlu, labelcompgap, 25dlu, labelcompgap, default"
+			"$columnSpecs": "5dlu, labelcompgap, 85dlu, labelcompgap, 85dlu, labelcompgap, 35dlu, labelcompgap, 5dlu"
 			"$rowSpecs": "6dlu, linegap, default, linegap, 3dlu, linegap, default, linegap, 3dlu"
 		} ) {
 			name: "this"
@@ -15,6 +15,7 @@ new FormModel {
 			add( new FormComponent( "javax.swing.JFormattedTextField" ) {
 				name: "pswPassword"
 				"editable": false
+				"font": new java.awt.Font( "Noto Mono", 0, 12 )
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
 				"gridX": 3
 				"gridY": 3
@@ -25,8 +26,9 @@ new FormModel {
 				"text": "Reveal Password"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnHideActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
-				"gridX": 3
+				"gridX": 2
 				"gridY": 7
+				"gridWidth": 2
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "btnCopy"
@@ -44,10 +46,11 @@ new FormModel {
 			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
 				"gridX": 7
 				"gridY": 7
+				"gridWidth": 2
 			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
-			"size": new java.awt.Dimension( 455, 130 )
+			"size": new java.awt.Dimension( 405, 125 )
 		} )
 	}
 }

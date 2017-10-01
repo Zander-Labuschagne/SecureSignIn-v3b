@@ -1,17 +1,9 @@
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.util.LinkedList;
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import com.jgoodies.forms.factories.*;
 import com.jgoodies.forms.layout.*;
-import com.jgoodies.uif_lite.panel.*;
-import com.sun.codemodel.internal.JOp;
-import com.sun.javafx.iio.ImageFrame;
-import com.sun.tools.internal.jxc.ap.Options;
 /*
  * Created by JFormDesigner on Sun Jun 05 06:47:23 SAST 2016
  */
@@ -27,6 +19,7 @@ public class SecureSignIn extends JFrame
     private char[] plainPassword;
     private char[] key;
     private char[] cipherPassword;
+    //private final String OS = System.getProperty("os.name");
 
     /**
      * Default Constructor
@@ -37,33 +30,19 @@ public class SecureSignIn extends JFrame
         plainPassword = null;
         key = null;
         cipherPassword = null;
-
-        /*BufferedImage img = null;
-        try
-        {
-            img = ImageIO.read(new File("CryogenSoftware/CRYOGEN1.1.1.png"));
-        }
-        catch (IOException ioex)
-        {
-
-        }
-        BufferedImage imgrez = (BufferedImage) img.getScaledInstance(lblLogo.getWidth(), lblLogo.getHeight(), Image.SCALE_SMOOTH);
-        ImageIcon imgico = new ImageIcon(imgrez);
-
-            //ImageIcon logo = new ImageIcon("CryogenSoftware/CRYOGEN1.1.1.png");
-            lblLogo.setIcon(imgico);*/
-
     }
 
-    private Image getScaledImage(Image par, int w, int h)
+    /**
+     * Overloaded Constructor
+     * @param OS operating system
+     */
+    public SecureSignIn(String OS)
     {
-        BufferedImage img = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
-        Graphics2D g2 = img.createGraphics();
-        g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
-        g2.drawImage(par, 0, 0, w, h, null);
-        g2.dispose();
-
-        return img;
+        this();
+        if(OS.equals("Linux"))
+            label1.setIcon(new ImageIcon(this.getClass().getResource("CryogenSoftware/cryogen_blue_landscape_dark_theme.png")));
+        else
+            label1.setIcon(new ImageIcon(this.getClass().getResource("CryogenSoftware/cryogen_blue_landscape_light_theme.png")));
     }
 
     private void btnEncryptActionPerformed(ActionEvent e)
@@ -236,7 +215,7 @@ public class SecureSignIn extends JFrame
                     cipherPassword[vi] = 126;
 
             //Limitations
-            if(ext == 1)
+            if(ext == 1 || limit < 32)
             {
                 char[] cipherPasswordLimited = new char[limit < cipherPassword.length ? limit : cipherPassword.length];
                 for (int vii = 0; vii < cipherPassword.length && vii < limit; vii++)
@@ -277,20 +256,24 @@ public class SecureSignIn extends JFrame
         vSpacer1 = new JPanel(null);
 
         //======== this ========
-        setTitle("Cryogen Software: Secure Sign In 2.0");
+        setTitle("Cryogen Software: Secure Sign In 2.1");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         setBackground(new Color(0, 51, 102));
         setForeground(Color.black);
         setType(Window.Type.UTILITY);
+        setIconImage(new ImageIcon(getClass().getResource("/CryogenSoftware/cryogen_blue_icon_64.png")).getImage());
         Container contentPane = getContentPane();
         contentPane.setLayout(new FormLayout(
             "10dlu, $lcgap, default, $lcgap, 2dlu, 20dlu, $lcgap, 105dlu, $lcgap, 35dlu, $lcgap, 10dlu",
             "3*(15dlu, $lgap), 2*(default, $lgap), 15dlu, $lgap, default, $lgap, 10dlu"));
+
+        //---- vSpacer2 ----
+        vSpacer2.setVisible(false);
         contentPane.add(vSpacer2, CC.xywh(6, 1, 1, 5));
 
         //---- label1 ----
-        label1.setIcon(new ImageIcon("/media/zander/Corsair 128/Projects/2015/SecureSignIn/MultiPlatform(Java)/SecureSignInV2/Project/SecureSignInV2/res/CryogenSoftware/c3.png"));
+        label1.setIcon(null);
         contentPane.add(label1, CC.xywh(6, 1, 3, 5, CC.CENTER, CC.DEFAULT));
         contentPane.add(hSpacer1, CC.xy(1, 7));
 
@@ -366,9 +349,17 @@ public class SecureSignIn extends JFrame
         {
             public void run()
             {
-               try
+                String OS = System.getProperty("os.name");
+                try
                 {
-                    UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
+                    if(OS.equalsIgnoreCase("Linux"))
+                        UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
+                    else if(OS.equalsIgnoreCase("Windows 7") || OS.equalsIgnoreCase("Windows 8") || OS.equalsIgnoreCase("Windows 8.1") || OS.equalsIgnoreCase("Windows 10"))
+                        UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+                    else if(OS.equalsIgnoreCase("Windows XP") || OS.equalsIgnoreCase("Windows ME") || OS.equalsIgnoreCase("Windows 2000") || OS.equalsIgnoreCase("Windows 98") || OS.equalsIgnoreCase("Windows 95"))
+                        UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsClassicLookAndFeel");
+                    //UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+                    //UIManager.setLookAndFeel("com.bulenkov.darcula.DarculaLaf");
                 }
                 catch (ClassNotFoundException e)
                 {
@@ -386,9 +377,8 @@ public class SecureSignIn extends JFrame
                 {
                     e.printStackTrace();
                 }
-                //final String OS = System.getProperty("os.name");
                 //System.setProperty("sun.java2d.opengl", "True");
-                SecureSignIn ssi = new SecureSignIn();
+                SecureSignIn ssi = new SecureSignIn(OS);
                 ssi.pack();
                 ssi.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 ssi.setVisible(true);
