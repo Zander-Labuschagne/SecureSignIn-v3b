@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Secure Sign In 3.3
+Comment=Utility increasing security on accounts
+GenericName=Utility
+Exec=sh /opt/SecureSignIn/SecureSignIn-3.3.sh
+Icon=/opt/SecureSignIn/ssi.png
+Type=Application
+Version=3.3
+Categories=GNOME;GTK;Utility;Security;
+MimeType=text/plain;
