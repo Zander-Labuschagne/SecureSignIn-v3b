@@ -30,7 +30,7 @@ How to install:
   2. Either run the SecureSignIn-3.4.jar file on any operating system(double click the file or ``java -jar SecureSignIn-3.4.jar`` in command line) or run the install.sh file after extracting the zip file to install the application on Linux systems with the following command: ``sudo sh install.sh``.
   3. On some Linux systems it's necessary to run ``sudo chmod +x install.sh`` before installation.
  
- (Feel free to create Windows and macOS versions, I will eventaually do them myself when I get to it)
+ (Feel free to create Windows and macOS versions, I will not make them myself)
 
 
 How to use application:
