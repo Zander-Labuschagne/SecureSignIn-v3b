@@ -17,7 +17,7 @@ public class Main extends Application
     {
         ssiWindow.initStyle(StageStyle.DECORATED);
         ssiWindow.getIcons().add(new Image(getClass().getResourceAsStream("/cryogen/icon.png")));
-        ssiWindow.setTitle("Secure Sign In V3.2");
+        ssiWindow.setTitle("Secure Sign In v3.4");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SecureSignIn.fxml"));
         ssiWindow.setHeight(272);
         ssiWindow.setWidth(442);

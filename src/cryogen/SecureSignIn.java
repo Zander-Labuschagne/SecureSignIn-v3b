@@ -2,7 +2,7 @@ package cryogen;
 
 /**
  * @author Zander Labuschagne
- * E-Mail: ZANDER.LABUSCHAGNE@PROTONMAIL.CH
+ * E-Mail: <zander.labuschagne@protonmail.ch>
  */
 
 import javafx.event.ActionEvent;
