@@ -59,59 +59,6 @@
 {
     -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 0.4), 5, 0.65, 0, 0);
 }
-/* The main scrollbar CSS class of TextArea */
-.txtDefault .scroll-bar:horizontal,
-.txtDefault  .scroll-bar:vertical
-{
-    -fx-background-color:rgb(38, 40, 49);
-}
-/* The increment and decrement button CSS class of scrollbar */
-.txtDefault .increment-button,
-.txtDefault .decrement-button
-{
-    -fx-background-color:transparent;
-    -fx-border-color:rgb(49, 52, 63);
-}
-/* The main scrollbar **track** CSS class  */
-.txtDefault .scroll-bar:horizontal .track,
-.txtDefault .scroll-bar:vertical .track
-{
-    -fx-background-color: rgb(38, 40, 49);
-    -fx-border-color:rgb(49, 52, 63);
-    /*-fx-border-color:#000;*/
-    -fx-background-radius: 0em;
-}
-/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
-.txtDefault .scroll-bar:horizontal .thumb,
-.txtDefault .scroll-bar:vertical .thumb
-{
-    /*-fx-background-color:derive(black,50%);*/
-    -fx-background-color:rgb(104, 112, 136);
-    -fx-background-insets: 0, 0, 0;
-    -fx-background-radius: 0em;
-}
-/* The main scrollbar **track** CSS class on event of "hover" and "pressed" */
-.txtDefault .scroll-bar:horizontal:hover .track,
-.txtDefault .scroll-bar:horizontal:pressed .track,
-.txtDefault .scroll-bar:vertical:hover .track,
-.txtDefault .scroll-bar:vertical:pressed .track
-{
-    /* -fx-background-color: derive(#434343,20%);*/
-    -fx-opacity: 0.2;
-    -fx-background-radius: 0em;
-}
-
-/* The main scrollbar **thumb** CSS class on event of "hover" and "pressed" */
-.txtDefault .scroll-bar .thumb:hover,
-.txtDefault .scroll-bar .thumb:pressed
-{
-    -fx-background-color:  #7dc6bf;
-}
-.txtDefault .increment-button:hover,
-.txtDefault .decrement-button:hover
-{
-    -fx-background-color:rgba(0, 93, 255, 0.4);
-}
 
 /*******************************************************************************
  *                                                                             *
@@ -246,18 +193,12 @@
     -fx-text-fill:  #7dc6bf;
     -fx-border-color: rgb(15, 15, 15);
     -fx-border-width: 0.75;
-    /*-fx-background-insets: 0 0 -1 0, 0, 1, 2;
-    -fx-background-radius: 3px, 3px, 2px, 1px;
-    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
-    /*-fx-alignment: CENTER;
-    -fx-content-display: LEFT;*/
 }
 .button:hover
 {
     -fx-effect: dropshadow(gaussian, rgba(0, 93, 255, 0.4), 5, 0.65, 0, 0);
     -fx-background-color: rgba(0,93,255,0.1);
     -fx-text-fill:  #7dc6bf;
-
 }
 .button:armed
 {
@@ -294,62 +235,40 @@
     -fx-font-size: 1em;
     -fx-text-fill: #7dc6bf;
 }
-
 .toggle-switch .thumb
 {
-    /*-fx-background-color:
-            linear-gradient(to bottom, derive(-fx-text-box-border, -20%), derive(-fx-text-box-border, -30%)),
-            -fx-inner-border,
-            -fx-body-color;*/
     -fx-background-insets: 0, 1, 2;
-
     -fx-background-color: #7dc6bf;
-    /*-fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-body-color;*/
-    /*-fx-background-insets: 0 0 -1 0, 0, 1;*/
     -fx-background-radius: 1.0em; /* large value to make sure this remains circular */
     -fx-padding: 0.75em;
     -fx-alignment: CENTER;
     -fx-content-display: LEFT;
 }
-
 .toggle-switch .thumb-area
 {
     -fx-background-radius: 1em;
     -fx-background-color: rgb(104, 112, 136);
     -fx-background-insets: 0, 1;
 }
-
-/*.toggle-switch:hover .thumb-area{*/
-/*-fx-background-color: -fx-outer-border, white;*/
-/*}*/
-
-/*.toggle-switch:selected:hover .thumb-area{*/
-/*-fx-background-color: -fx-outer-border, #4fabff;*/
-/*}*/
-
 .toggle-switch:hover .thumb
 {
     -fx-color: -fx-hover-base
 }
-
 .toggle-switch:selected .thumb-area
 {
     -fx-background-color: rgb(104, 112, 136);
     -fx-background-insets: 0, 1;
 
 }
-
 .toggle-switch:pressed .thumb-area, .toggle-switch:selected:pressed .thumb-area
 {
     -fx-background-insets: 0, 1;
     -fx-background-color: -fx-outer-border,rgb(104, 112, 136);
 }
-
 .toggle-switch .thumb-area
 {
     -fx-padding: 0.75em 1.333333em 0.75em 1.333333em; /* 7 16 7 16 */
 }
-
 .toggle-switch:disabled
 {
     -fx-opacity: 0.4;
