@@ -1,5 +1,5 @@
 # Secure-Sign-In v3b
-This is JavaFX application I have created in an attempt to improve my online account security. The _b_ in the version code states that this is the GUI(Graphical User Interface) version where _a_ would be the CLI(Command Line Interface). Find the new release at _TBA_.
+This is JavaFX application I have created in an attempt to improve my online account security. The _b_ in the version code states that this is the GUI(Graphical User Interface) version where _a_ would be the CLI(Command Line Interface). Find the new release at https://github.com/Zander-Labuschagne/SecureSignIn-v4b.
 
 Benifits:
   - Remember one password for all sites, but all sites have different passwords.
@@ -8,7 +8,7 @@ Benifits:
   - No passwords are stored in file or database.
   - Easy to use.
   
-This(_v3_) was my first JavaFX application I have created and my first Linux deployable application. Feel free to criticize or comment.
+This(_v3b_) was my first JavaFX application I have created and my first Linux deployable application. Feel free to criticize or comment.
 There are Android, iPhone, iPad and macOS applications available as well, however they are not always up to date and I have left some of them discontinued/incomplete. I work on these projects in my free time only so don't expect regular updates from me.
 
 macOS(Swift) version: TBA
@@ -21,7 +21,7 @@ iOS(iPad) version: TBA
   
 The logo and name on the application comes from an iWorks template, it is not a registered company name or logo, I just added it to make it look cool.
 
-E-Mail: ZANDER.LABUSCHAGNE@PROTONMAIL.CH
+E-Mail: <zander.labuschagne@protonmail.ch>
 
 Copyright (C) 2017 Zander Labuschagne. This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation.
 
