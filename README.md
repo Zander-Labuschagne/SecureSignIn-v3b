@@ -23,7 +23,7 @@ The logo and name on the application comes from an iWorks template, it is not a 
 
 E-Mail: <zander.labuschagne@protonmail.ch>
 
-Copyright (C) 2017 Zander Labuschagne. This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation.
+Copyright (C) 2018 Zander Labuschagne. This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation.
 
 How to install:
   1. Oracle Java Runtime Environment 10 is required to run the application, OpenJDK does not work well with JavaFX. JRE and JDK versions 9 and below were never tested, let me know whether it works on other versions or not.
