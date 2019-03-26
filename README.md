@@ -19,7 +19,7 @@ iOS(iPhone) version: TBA
 
 iOS(iPad) version: TBA
   
-The logo and name on the application comes from an iWorks template, it is not a registered company name or logo, I just added it to make it look cool.
+The logo and name on the application comes from an iWorks template, it is not a registered company name or logo, I just added it to make it look impressive.
 
 E-Mail: <zander.labuschagne@protonmail.ch>
 
