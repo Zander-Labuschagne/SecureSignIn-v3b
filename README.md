@@ -26,7 +26,7 @@ E-Mail: <zander.labuschagne@protonmail.ch>
 Copyright (C) 2018 Zander Labuschagne. This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 as published by the Free Software Foundation.
 
 How to install:
-  1. Oracle Java Runtime Environment 8 is required to run the application, OpenJDK does not work well with JavaFX. JRE and JDK versions 7 and below were never tested, let me know whether it works on other versions or not.
+  1. Oracle Java Runtime Environment 10 is required to run the application, OpenJDK does not work well with JavaFX. JRE and JDK versions older than 10 is not expected to work, versions 11 and above does not work, use Secure Sign In v4b version instead.
   2. Either run the SecureSignIn-3.5b.jar file inside the bin folder on any operating system(double click the file or execute ``java -jar SecureSignIn-3.5b.jar`` in the terminal) or run the install.sh file after extracting the zip file to install the application on Linux systems with the following command: ``sudo sh install.sh``.
   3. On some Linux systems it's necessary to run ``sudo chmod +x install.sh`` before installation.
  
