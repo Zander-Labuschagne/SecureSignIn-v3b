@@ -13,7 +13,7 @@ There are Android, iPhone, iPad and macOS applications available as well, howeve
 
 macOS(Swift) version: TBA
 
-Android version: TBA
+Android version: _Discontinued_
 
 iOS(iPhone) version: TBA
 
