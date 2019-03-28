@@ -13,7 +13,7 @@ There are Android, iPhone, iPad and macOS applications available as well, howeve
 
 macOS(Swift) version: TBA
 
-Android version: _TBA_
+Android version: https://gitlab.com/Zander-Labuschagne/SecureSignIn-Android
 
 iOS(iPhone) version: TBA
 
