@@ -1,4 +1,4 @@
-# Secure Sign In v3b *Legacy*
+# Secure Sign In v3b *Discontinued*
 This is a JavaFX application I have created in an attempt to improve my online account security. The _b_ in the version code states that this is the GUI(Graphical User Interface) version where _a_ would be the CLI(Command Line Interface). Find the new release(Qt GUI apllication) at https://gitlab.com/Zander-Labuschagne/SecureSignIn-v4b or https://github.com/Zander-Labuschagne/SecureSignIn-v4b.
 
 #### Benifits:
@@ -8,12 +8,12 @@ This is a JavaFX application I have created in an attempt to improve my online a
   - No passwords are stored in file or database.
   - Easy to use.
   
-This(_v3b_) is my first JavaFX application I have created and my first Linux deployable application. Feel free to criticize or comment.
+This(*v3b*) is my first JavaFX application I have created and my first Linux deployable application. Feel free to criticize or comment.
 There are Android, iPhone, iPad and macOS applications available as well, however they are not always up to date and I have left some of them discontinued/incomplete. I work on these projects in my free time only so don't expect regular updates from me.
 
 macOS(Swift) version: TBA
 
-Mobile version: https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile (Android, Sailfish OS, iOS)
+Mobile version: https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile (Sailfish OS, iOS, Android)
   
 The logo and name on the application comes from an iWorks template, it is not a registered company name or logo, I just added it to make it look impressive.
 
