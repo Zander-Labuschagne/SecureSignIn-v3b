@@ -1,5 +1,5 @@
 # Secure Sign In v3b *Discontinued*
-This is a JavaFX application I have created in an attempt to improve my online account security. The _b_ in the version code states that this is the GUI(Graphical User Interface) version where _a_ would be the CLI(Command Line Interface). Find the new release(Qt GUI apllication) at https://gitlab.com/Zander-Labuschagne/SecureSignIn-v4b or https://github.com/Zander-Labuschagne/SecureSignIn-v4b.
+This is a JavaFX application I have created in an attempt to improve my online account security. The user provides a password with an accompanying key that is unique to the website(or account) requiring the password, the application then provides a lengthy and complicated password to be used instead. The _b_ in the version code states that this is the GUI(Graphical User Interface) version where _a_ would be the CLI(Command Line Interface). Find the new release(Qt GUI apllication) at https://gitlab.com/Zander-Labuschagne/SecureSignIn-v4b or https://github.com/Zander-Labuschagne/SecureSignIn-v4b.
 
 #### Benifits:
   - Remember one password for all sites, but all sites have different passwords.
