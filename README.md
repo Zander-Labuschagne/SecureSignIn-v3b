@@ -13,7 +13,11 @@ There are Android, iPhone, iPad and macOS applications available as well, howeve
 
 macOS(Swift) version: TBA
 
-Mobile version: https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile (Sailfish OS, iOS, Android)
+Sailfish OS version: *In progress*
+
+iOS version: *TBA*
+
+Mobile version: https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile
   
 The logo and name on the application comes from an iWorks template, it is not a registered company name or logo, I just added it to make it look impressive.
 
